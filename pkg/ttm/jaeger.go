@@ -3,7 +3,8 @@ package ttm
 import (
 	"encoding/json"
 	"fmt"
-	"strings"
+
+	"github.com/dhulihan/trace-to-mermaid/pkg/mermaid"
 )
 
 type Options struct {
@@ -55,47 +56,11 @@ func ParseJaegerTrace(b []byte) (*JaegerTrace, error) {
 	return t, nil
 }
 
-func (t *JaegerTrace) ToMermaidFlowDiagram(opts *Options) (string, error) {
-	// use this for now, we could introduce a more sophisticated
-	// struct to contain a flow diagram
-	var b strings.Builder
-
-	b.WriteString("flowchart " + opts.Direction() + "\n")
-	p, err := t.processes(opts)
-	if err != nil {
-		return "", fmt.Errorf("could not render processes: %w", err)
+func (t *JaegerTrace) ToMermaidFlowchart(opts *Options) (string, error) {
+	flowchart := &mermaid.Flowchart{
+		Direction: opts.Direction(),
 	}
-	b.WriteString(p)
 
 	// processes only for now
-	return b.String(), nil
-}
-
-func (t *JaegerTrace) processes(opts *Options) (string, error) {
-	ps := t.Data[0].Processes
-	if len(ps) == 0 {
-		return "", fmt.Errorf("no processes found in trace")
-	}
-
-	// use this for now, we could introduce a more sophisticated
-	// struct to contain a flow diagram
-	var b strings.Builder
-
-	// pre-define nodes
-	for k, p := range ps {
-		b.WriteString(fmt.Sprintf(`%s("%s")`, k, p.ServiceName))
-	}
-
-	// define connections between nodes
-	counter := 0
-	for k := range ps {
-		counter += 1
-		// write connector
-		if counter != len(ps) {
-			b.WriteString(k + ` --> \n`)
-		}
-
-	}
-
-	return b.String(), nil
+	return flowchart.Render()
 }

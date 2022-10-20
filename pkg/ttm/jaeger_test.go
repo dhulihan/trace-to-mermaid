@@ -5,11 +5,18 @@ import (
 	"os"
 	"testing"
 
+	"github.com/dhulihan/trace-to-mermaid/pkg/mermaid"
 	"github.com/stretchr/testify/assert"
 )
 
 func loadTrace(t *testing.T, filename string) *JaegerTrace {
 	t.Helper()
+
+	err := mermaid.LoadTemplates()
+	if err != nil {
+		t.Fatalf("Error loading templates: %s", err)
+	}
+
 	goldenPath := "../../test/" + filename
 
 	f, err := os.OpenFile(goldenPath, os.O_RDWR, 0644)
@@ -49,7 +56,7 @@ foo
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := tt.trace.ToMermaidFlowDiagram(tt.args.opts)
+			got, err := tt.trace.ToMermaidFlowchart(tt.args.opts)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("JaegerTrace.ToMermaidFlowDiagram() error = %v, wantErr %v", err, tt.wantErr)
 				return
