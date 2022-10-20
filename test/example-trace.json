@@ -1,0 +1,1382 @@
+{
+    "data": [
+        {
+            "traceID": "59993b84986467e0",
+            "spans": [
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "59993b84986467e0",
+                    "flags": 1,
+                    "operationName": "HTTP GET",
+                    "references": [],
+                    "startTime": 1652140583629181,
+                    "duration": 25626,
+                    "tags": [
+                        {
+                            "key": "sampler.type",
+                            "type": "string",
+                            "value": "lowerbound"
+                        },
+                        {
+                            "key": "sampler.param",
+                            "type": "float64",
+                            "value": 0.001
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.url",
+                            "type": "string",
+                            "value": "/desktop/v1/voicemails/count?workstationSlug=none"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "/desktop/v1/*"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "key": "http.status_code",
+                            "type": "int64",
+                            "value": 400
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583629296,
+                            "fields": [
+                                {
+                                    "key": "INFO",
+                                    "type": "string",
+                                    "value": "HTTP Request t=[2022-05-09T23:56:23Z], id=[59993b84986467e0], method=[GET], path=[/desktop/v1/voicemails/count], useragent=[Weave: 7.35.1000 | NWJS: 0.55.0 | OS: Windows NT 10.0; WOW64 | Chrome/92.0.4515.107], ip=[10.12.125.2], remoteip=[63.226.22.4], locationid=[4306cb23-c8ec-4521-afa3-8aa97d07b144]"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583654790,
+                            "fields": [
+                                {
+                                    "key": "INFO",
+                                    "type": "string",
+                                    "value": "HTTP Response t=[2022-05-09T23:56:23Z], id=[59993b84986467e0], status=[400], bytes=[61], duration=[25.516553ms], pattern=[/desktop/v1/desktop/v1/*]"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "6ee4f1f912e5923c",
+                    "flags": 1,
+                    "operationName": "gRPC /locationproto.LocationRPC/Location",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "59993b84986467e0"
+                        }
+                    ],
+                    "startTime": 1652140583629534,
+                    "duration": 1702,
+                    "tags": [
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "2xx"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": "59993b84986467e0"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "5caa5f084fa4b95e",
+                    "flags": 1,
+                    "operationName": "gRPC /locationproto.LocationRPC/Location",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "6ee4f1f912e5923c"
+                        }
+                    ],
+                    "startTime": 1652140583630103,
+                    "duration": 614,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "2xx"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583630117,
+                            "fields": [
+                                {
+                                    "key": "INFO",
+                                    "type": "string",
+                                    "value": "making gRPC request FullMethod=[/locationproto.LocationRPC/Location], t=[2022-05-09 23:56:23.630109927 +0000 UTC m=+1825809.967651326]"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583630695,
+                            "fields": [
+                                {
+                                    "key": "INFO",
+                                    "type": "string",
+                                    "value": "finished gRPC request FullMethod=[/locationproto.LocationRPC/Location], t=[2022-05-09 23:56:23.630684298 +0000 UTC m=+1825809.968225722], duration=[577.118µs], grpcStatus=[OK]"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "00406d308bcd7e71",
+                    "flags": 1,
+                    "operationName": "gRPC /locationproto.LocationRPC/Location",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "59993b84986467e0"
+                        }
+                    ],
+                    "startTime": 1652140583631270,
+                    "duration": 2043,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "2xx"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": "59993b84986467e0"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "67442759ca9497a3",
+                    "flags": 1,
+                    "operationName": "gRPC /locationproto.LocationRPC/Location",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "00406d308bcd7e71"
+                        }
+                    ],
+                    "startTime": 1652140583631735,
+                    "duration": 1256,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "2xx"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583631759,
+                            "fields": [
+                                {
+                                    "key": "INFO",
+                                    "type": "string",
+                                    "value": "making gRPC request FullMethod=[/locationproto.LocationRPC/Location], t=[2022-05-09 23:56:23.631748226 +0000 UTC m=+1825790.884404863]"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583632953,
+                            "fields": [
+                                {
+                                    "key": "INFO",
+                                    "type": "string",
+                                    "value": "finished gRPC request FullMethod=[/locationproto.LocationRPC/Location], t=[2022-05-09 23:56:23.632935617 +0000 UTC m=+1825790.885592282], duration=[1.191952ms], grpcStatus=[OK]"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p3",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "4004bb9a7963572e",
+                    "flags": 1,
+                    "operationName": "gRPC /featureflags.FeatureFlagsServiceAPI/FlagEnabled",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "59993b84986467e0"
+                        }
+                    ],
+                    "startTime": 1652140583633336,
+                    "duration": 11329,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "2xx"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": "59993b84986467e0"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "72b69342b6f4ceab",
+                    "flags": 1,
+                    "operationName": "gRPC /featureflags.FeatureFlagsServiceAPI/FlagEnabled",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "4004bb9a7963572e"
+                        }
+                    ],
+                    "startTime": 1652140583634008,
+                    "duration": 10379,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "2xx"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p4",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "1cf59b69bf1a953d",
+                    "flags": 1,
+                    "operationName": "SQL feature-flags/internal/server_NewFlagIDFromNameMiddleware_func1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "72b69342b6f4ceab"
+                        }
+                    ],
+                    "startTime": 1652140583634072,
+                    "duration": 1938,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "consumer"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "SQL"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": "59993b84986467e0"
+                        },
+                        {
+                            "key": "primaryHostname",
+                            "type": "string",
+                            "value": "wsf-prod-1:us-west3:pgsql-west3-devx-feature-flags-1a"
+                        },
+                        {
+                            "key": "replicaHostname",
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583636001,
+                            "fields": [
+                                {
+                                    "key": "query",
+                                    "type": "string",
+                                    "value": "SELECT id, name, description, default_value, expiration FROM feature_flags WHERE 1=1 AND name = $1"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p4",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "732d0d9a82f40bb4",
+                    "flags": 1,
+                    "operationName": "gRPC /locationproto.LocationRPC/Location",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "72b69342b6f4ceab"
+                        }
+                    ],
+                    "startTime": 1652140583636202,
+                    "duration": 1671,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "2xx"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": "59993b84986467e0"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p4",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "56c792a751b634d8",
+                    "flags": 1,
+                    "operationName": "gRPC /locationproto.LocationRPC/Location",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "732d0d9a82f40bb4"
+                        }
+                    ],
+                    "startTime": 1652140583636707,
+                    "duration": 578,
+                    "tags": [
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "2xx"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583636722,
+                            "fields": [
+                                {
+                                    "key": "INFO",
+                                    "type": "string",
+                                    "value": "making gRPC request FullMethod=[/locationproto.LocationRPC/Location], t=[2022-05-09 23:56:23.636713757 +0000 UTC m=+1825791.060576686]"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583637253,
+                            "fields": [
+                                {
+                                    "key": "INFO",
+                                    "type": "string",
+                                    "value": "finished gRPC request FullMethod=[/locationproto.LocationRPC/Location], t=[2022-05-09 23:56:23.637240293 +0000 UTC m=+1825791.061103245], duration=[530.198µs], grpcStatus=[OK]"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p5",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "72152866cfed84d1",
+                    "flags": 1,
+                    "operationName": "gRPC /locationproto.LocationRPC/Location",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "72b69342b6f4ceab"
+                        }
+                    ],
+                    "startTime": 1652140583637904,
+                    "duration": 1524,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "2xx"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": "59993b84986467e0"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p4",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "51d060b0e7bc9c1c",
+                    "flags": 1,
+                    "operationName": "gRPC /locationproto.LocationRPC/Location",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "72152866cfed84d1"
+                        }
+                    ],
+                    "startTime": 1652140583638395,
+                    "duration": 588,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "2xx"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583638413,
+                            "fields": [
+                                {
+                                    "key": "INFO",
+                                    "type": "string",
+                                    "value": "making gRPC request FullMethod=[/locationproto.LocationRPC/Location], t=[2022-05-09 23:56:23.63840411 +0000 UTC m=+1825791.062267035]"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583638962,
+                            "fields": [
+                                {
+                                    "key": "INFO",
+                                    "type": "string",
+                                    "value": "finished gRPC request FullMethod=[/locationproto.LocationRPC/Location], t=[2022-05-09 23:56:23.638951403 +0000 UTC m=+1825791.062814352], duration=[550.264µs], grpcStatus=[OK]"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p5",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "615e99161bf33c15",
+                    "flags": 1,
+                    "operationName": "SQL feature-flags/internal/server_Server_ListLocationFlags",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "72b69342b6f4ceab"
+                        }
+                    ],
+                    "startTime": 1652140583639491,
+                    "duration": 1718,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "consumer"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "SQL"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": "59993b84986467e0"
+                        },
+                        {
+                            "key": "primaryHostname",
+                            "type": "string",
+                            "value": "wsf-prod-1:us-west3:pgsql-west3-devx-feature-flags-1a"
+                        },
+                        {
+                            "key": "replicaHostname",
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583641203,
+                            "fields": [
+                                {
+                                    "key": "query",
+                                    "type": "string",
+                                    "value": "SELECT id, name, description, default_value, expiration FROM feature_flags WHERE 1=1 AND id = $1 AND name = $2"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p4",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "64a70b5f0ee08e26",
+                    "flags": 1,
+                    "operationName": "SQL feature-flags/internal/server_Server_ListLocationFlags",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "72b69342b6f4ceab"
+                        }
+                    ],
+                    "startTime": 1652140583641280,
+                    "duration": 1462,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "consumer"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "SQL"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": "59993b84986467e0"
+                        },
+                        {
+                            "key": "primaryHostname",
+                            "type": "string",
+                            "value": "wsf-prod-1:us-west3:pgsql-west3-devx-feature-flags-1a"
+                        },
+                        {
+                            "key": "replicaHostname",
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583642737,
+                            "fields": [
+                                {
+                                    "key": "query",
+                                    "type": "string",
+                                    "value": "SELECT feature_flag_id, value FROM location_feature_flags WHERE location_id = $1 AND feature_flag_id = $2 AND feature_flag_id IN (SELECT id FROM feature_flags WHERE name LIKE $3)"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p4",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "46b33dde9196b529",
+                    "flags": 1,
+                    "operationName": "SQL feature-flags/internal/server_Server_FlagEnabled",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "72b69342b6f4ceab"
+                        }
+                    ],
+                    "startTime": 1652140583642802,
+                    "duration": 1544,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "consumer"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "SQL"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": "59993b84986467e0"
+                        },
+                        {
+                            "key": "primaryHostname",
+                            "type": "string",
+                            "value": "wsf-prod-1:us-west3:pgsql-west3-devx-feature-flags-1a"
+                        },
+                        {
+                            "key": "replicaHostname",
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583644340,
+                            "fields": [
+                                {
+                                    "key": "query",
+                                    "type": "string",
+                                    "value": "SELECT feature_flag_id, value FROM location_feature_flags WHERE location_id = $1 AND feature_flag_id = $2 AND feature_flag_id IN (SELECT id FROM feature_flags WHERE name LIKE $3)"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p4",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "368bcae0f11e2f4f",
+                    "flags": 1,
+                    "operationName": "gRPC /siprpc.SIPProfileRPC/FindByUsername",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "59993b84986467e0"
+                        }
+                    ],
+                    "startTime": 1652140583644695,
+                    "duration": 9993,
+                    "tags": [
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "Unknown"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "0xx"
+                        },
+                        {
+                            "key": "error",
+                            "type": "bool",
+                            "value": true
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": "59993b84986467e0"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583654684,
+                            "fields": [
+                                {
+                                    "key": "gRPC.request",
+                                    "type": "string",
+                                    "value": "{\"Username\":\"none\",\"LocationID\":\"8ca989da-710e-4075-9035-811fcfc7167f\",\"ID\":null,\"TenantID\":null,\"ReadOptions\":null}"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583654684,
+                            "fields": [
+                                {
+                                    "key": "error.object",
+                                    "type": "string",
+                                    "value": "rpc error: code = Unknown desc = {\"cause\":\"Exact sipProfile match was not found\"}"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "7184e0f95ac7954c",
+                    "flags": 1,
+                    "operationName": "gRPC /siprpc.SIPProfileRPC/FindByUsername",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "368bcae0f11e2f4f"
+                        }
+                    ],
+                    "startTime": 1652140583645283,
+                    "duration": 8891,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "gRPC"
+                        },
+                        {
+                            "key": "response_code",
+                            "type": "string",
+                            "value": "Unknown"
+                        },
+                        {
+                            "key": "response_class",
+                            "type": "string",
+                            "value": "0xx"
+                        },
+                        {
+                            "key": "RequestID",
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583654170,
+                            "fields": [
+                                {
+                                    "key": "gRPC.request",
+                                    "type": "string",
+                                    "value": "{\"Username\":\"none\",\"LocationID\":\"8ca989da-710e-4075-9035-811fcfc7167f\",\"ID\":null,\"TenantID\":null,\"ReadOptions\":null}"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583654171,
+                            "fields": [
+                                {
+                                    "key": "error.object",
+                                    "type": "string",
+                                    "value": "Exact sipProfile match was not found"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p6",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "4c9b1111064f9984",
+                    "flags": 1,
+                    "operationName": "HTTP Client",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "7184e0f95ac7954c"
+                        }
+                    ],
+                    "startTime": 1652140583645534,
+                    "duration": 8515,
+                    "tags": [
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p6",
+                    "warnings": null
+                },
+                {
+                    "traceID": "59993b84986467e0",
+                    "spanID": "4690991555615a94",
+                    "flags": 1,
+                    "operationName": "HTTP GET",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "59993b84986467e0",
+                            "spanID": "4c9b1111064f9984"
+                        }
+                    ],
+                    "startTime": 1652140583645537,
+                    "duration": 8557,
+                    "tags": [
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "net/http"
+                        },
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.url",
+                            "type": "string",
+                            "value": "http://phone-data-service.phone.svc.cluster.local./api/sip_profiles?external_key%5B%5D=8ca989da-710e-4075-9035-811fcfc7167f\u0026include%5B%5D=labels\u0026username%5B%5D=none"
+                        },
+                        {
+                            "key": "http.url",
+                            "type": "string",
+                            "value": "phone-data-service.phone.svc.cluster.local.:80"
+                        },
+                        {
+                            "key": "net/http.reused",
+                            "type": "bool",
+                            "value": true
+                        },
+                        {
+                            "key": "net/http.was_idle",
+                            "type": "bool",
+                            "value": true
+                        },
+                        {
+                            "key": "http.status_code",
+                            "type": "int64",
+                            "value": 200
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [
+                        {
+                            "timestamp": 1652140583645558,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "GetConn"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583645568,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "GotConn"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583645608,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "WroteHeaders"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583645611,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "WroteRequest"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583654004,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "GotFirstResponseByte"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583654084,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "PutIdleConn"
+                                }
+                            ]
+                        },
+                        {
+                            "timestamp": 1652140583654095,
+                            "fields": [
+                                {
+                                    "key": "event",
+                                    "type": "string",
+                                    "value": "ClosedBody"
+                                }
+                            ]
+                        }
+                    ],
+                    "processID": "p6",
+                    "warnings": null
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "desktop-api",
+                    "tags": [
+                        {
+                            "key": "client-uuid",
+                            "type": "string",
+                            "value": "42475231d9d3bc41"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "desktop-api-7f655c66d9-c9c8d"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "10.12.98.244"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "Go-2.28.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "data-location",
+                    "tags": [
+                        {
+                            "key": "client-uuid",
+                            "type": "string",
+                            "value": "47f52fe85c7fcac0"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "data-location-78f7d565b8-7zddf"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "10.12.154.204"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "Go-2.23.1"
+                        }
+                    ]
+                },
+                "p3": {
+                    "serviceName": "data-location",
+                    "tags": [
+                        {
+                            "key": "client-uuid",
+                            "type": "string",
+                            "value": "6107aade88285475"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "data-location-78f7d565b8-khb4z"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "10.12.100.81"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "Go-2.23.1"
+                        }
+                    ]
+                },
+                "p4": {
+                    "serviceName": "feature-flags",
+                    "tags": [
+                        {
+                            "key": "client-uuid",
+                            "type": "string",
+                            "value": "29954a835bba5ad2"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "feature-flags-65b455fcc9-7zqjw"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "10.12.28.59"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "Go-2.25.0"
+                        }
+                    ]
+                },
+                "p5": {
+                    "serviceName": "data-location",
+                    "tags": [
+                        {
+                            "key": "client-uuid",
+                            "type": "string",
+                            "value": "2ea26be343d8a639"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "data-location-78f7d565b8-d9b75"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "10.12.145.215"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "Go-2.23.1"
+                        }
+                    ]
+                },
+                "p6": {
+                    "serviceName": "phone-external-api",
+                    "tags": [
+                        {
+                            "key": "client-uuid",
+                            "type": "string",
+                            "value": "54ddb1dee06a2830"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "phone-external-api-6bb5775867-8rn9h"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "10.12.84.73"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "Go-2.30.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}
