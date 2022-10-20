@@ -4,6 +4,8 @@ import (
 	"io/ioutil"
 	"os"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func loadTrace(t *testing.T, filename string) *JaegerTrace {
@@ -40,9 +42,9 @@ func TestJaegerTrace_ToMermaidFlowDiagram(t *testing.T) {
 			name:  "happy path",
 			trace: loadTrace(t, "example-trace.json"),
 			want: `
-			flowchart TD
-			foo
-			`,
+flowchart TD
+foo
+`,
 		},
 	}
 	for _, tt := range tests {
@@ -52,9 +54,7 @@ func TestJaegerTrace_ToMermaidFlowDiagram(t *testing.T) {
 				t.Errorf("JaegerTrace.ToMermaidFlowDiagram() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
-			if got != tt.want {
-				t.Errorf("JaegerTrace.ToMermaidFlowDiagram() = %v, want %v", got, tt.want)
-			}
+			assert.Equal(t, tt.want, got)
 		})
 	}
 }
